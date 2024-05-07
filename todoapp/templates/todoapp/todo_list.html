@@ -1,0 +1,12 @@
+{% extends "todoapp/base.html" %}
+
+{% block content %}
+<a > Add Todo </a>
+
+<ul>
+    {% for todo in todos %}
+    <li>{{todo.title}} - {% if todo.completed %}Completed{% endif %}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}
+
